@@ -20,7 +20,7 @@ function App() {
     const timeDiff = endTime - startTime;
     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
     const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-    setTime(`${minutes}:${seconds}`);
+    setTime(`${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`);
     setIsRunning(false);
   }
 
