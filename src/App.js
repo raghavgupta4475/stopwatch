@@ -34,8 +34,11 @@ function App() {
     <>
       <h3>Stopwatch</h3>
       <p>Time: {time} </p>
-      <button onClick={stop}>Stop</button>
-      <button onClick={start}>Start</button>
+      {isRunning ? (
+        <button onClick={stop}>Stop</button>
+      ) : (
+        <button onClick={start}>Start</button>
+      )}
       <button onClick={() => {
         setTime("0:00");
         clearInterval(intervalId);
