@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <h3>Stopwatch</h3>
-      <p>{`Time: ${time}`}</p>
+      <p>Time: {time} </p>
       {isRunning ? (
         <button onClick={stop}>Stop</button>
       ) : (
